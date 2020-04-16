@@ -2,8 +2,7 @@
 
 # hsl_colorpicker
 
-A beatyfull HSL Color Picker for Flutter
-Currently only supports Android and iOS!
+A HSL Color Picker for Flutter (Currently only supports Android and iOS)
 
 ![](images/example.gif)
 
