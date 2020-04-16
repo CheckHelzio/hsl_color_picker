@@ -59,13 +59,14 @@ class _ColorPickerPageState extends State<ColorPickerPage> {
           children: <Widget>[
             HSLColorPicker(
               onChanged: (colorSelected) {
+                print(colorSelected);
                 setState(() {
                   hslColor = colorSelected;
                   color = colorSelected.toColor();
                 });
               },
               size: 200,
-              strokeSize: 5,
+              strokeWidth: 5,
               thumbSize: 9,
               thumbStrokeSize: 3,
               showCenterColorIndicator: true,

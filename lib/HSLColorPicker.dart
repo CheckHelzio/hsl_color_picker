@@ -8,23 +8,23 @@ import 'package:flutter/material.dart';
 double pixelSize;
 
 class HSLColorPicker extends StatefulWidget {
+  final ValueChanged<HSLColor> onChanged;
   final Color initialColor;
   final double size;
-  double strokeSize;
+  double strokeWidth;
   double thumbSize;
   double thumbStrokeSize;
   bool showCenterColorIndicator;
   double centerColorIndicatorSize;
-  final ValueChanged<HSLColor> onChanged;
 
   HSLColorPicker({
     Key key,
     @required this.onChanged,
-    this.initialColor = Colors.red,
+    this.initialColor = Colors.blueAccent,
     this.size = 200,
     this.centerColorIndicatorSize,
     this.showCenterColorIndicator = true,
-    this.strokeSize,
+    this.strokeWidth,
     this.thumbSize,
     this.thumbStrokeSize,
   })  : assert(onChanged != null),
@@ -65,8 +65,8 @@ class _HSLColorPickerState extends State<HSLColorPicker> {
     lightness = color.lightness;
     saturation = color.saturation;
 
-    if (widget.strokeSize == null) {
-      widget.strokeSize = widget.size * .027;
+    if (widget.strokeWidth == null) {
+      widget.strokeWidth = widget.size * .027;
     }
     if (widget.thumbSize == null) {
       widget.thumbSize = widget.size * .043;
@@ -87,7 +87,7 @@ class _HSLColorPickerState extends State<HSLColorPicker> {
           size: Size(widget.size, widget.size),
           painter: new _WheelPainter(
               color: this.color,
-              strokeSize: widget.strokeSize,
+              strokeSize: widget.strokeWidth,
               showCenterColorIndicator: widget.showCenterColorIndicator,
               thumbSize: widget.thumbSize,
               centerColorIndicatorSize: widget.centerColorIndicatorSize,
@@ -117,8 +117,8 @@ class _HSLColorPickerState extends State<HSLColorPicker> {
 
     Offset vector = startPosition - center;
 
-    final maxRadioControles = _WheelPainter.radio(
-            size, widget.strokeSize, widget.thumbSize, widget.thumbStrokeSize) -
+    final maxRadioControles = _WheelPainter.radio(size, widget.strokeWidth,
+            widget.thumbSize, widget.thumbStrokeSize) -
         10;
     final hip = Math.sqrt(Math.pow(vector.dx, 2) + Math.pow(vector.dy, 2));
 
