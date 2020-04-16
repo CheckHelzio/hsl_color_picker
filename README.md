@@ -4,7 +4,10 @@
 
 A HSL Color Picker for Flutter (Currently only supports Android and iOS)
 
-![](images/example.gif)
+| Example app             | Example in other project|
+| ------------------------| ------------------------|
+| ![](images/example.gif) | ![](images/example.png) |
+
 
 ## How to use it
 
