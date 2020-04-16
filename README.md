@@ -1,8 +1,10 @@
-# hslcolorpicker
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3HHNV9W5RGDPJ&source=url)
+
+# hsl_colorpicker
 
 A beatyfull HSL Color Picker for Flutter
 
-## Getting Started
+## How to use it
 
 This project is a starting point for a Dart
 [package](https://flutter.dev/developing-packages/),

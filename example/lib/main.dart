@@ -66,59 +66,6 @@ class _ColorPickerPageState extends State<ColorPickerPage> {
               },
               size: 200,
             ),
-            SizedBox(height: 8),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              child: Text(
-                "Hue:\n${hslColor.hue}",
-                style: TextStyle(
-                    color: HSLColor.fromAHSL(1, hslColor.hue, .5, .5).toColor(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              child: Text(
-                "Saturation:\n${hslColor.saturation}",
-                style: TextStyle(
-                    color: HSLColor.fromAHSL(
-                            1, hslColor.hue, hslColor.saturation, .5)
-                        .toColor(),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              child: Stack(
-                children: <Widget>[
-                  Text(
-                    "Lightness:\n${hslColor.lightness}",
-                    style: TextStyle(
-                        foreground: Paint()
-                          ..style = PaintingStyle.stroke
-                          ..strokeWidth = .5
-                          ..color = Colors.grey,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "Lightness:\n${hslColor.lightness}",
-                    style: TextStyle(
-                        color: HSLColor.fromAHSL(
-                                1, hslColor.hue, .5, hslColor.lightness)
-                            .toColor(),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
           ],
         ),
       ),

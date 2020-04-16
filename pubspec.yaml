@@ -1,8 +1,8 @@
 name: hsl_colorpicker
 description: A beatyfull HSL Color Picker for Flutter
-version: 0.0.1
+version: 1.0.1
 author: CheckHelzio
-homepage:
+homepage: https://github.com/CheckHelzio/hsl_color_picker
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
