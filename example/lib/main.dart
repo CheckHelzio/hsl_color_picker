@@ -65,6 +65,12 @@ class _ColorPickerPageState extends State<ColorPickerPage> {
                 });
               },
               size: 200,
+              strokeSize: 5,
+              thumbSize: 9,
+              thumbStrokeSize: 3,
+              showCenterColorIndicator: true,
+              centerColorIndicatorSize: 80,
+              initialColor: Colors.blueAccent,
             ),
           ],
         ),

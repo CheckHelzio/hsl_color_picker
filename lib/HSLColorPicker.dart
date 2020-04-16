@@ -20,7 +20,7 @@ class HSLColorPicker extends StatefulWidget {
   HSLColorPicker({
     Key key,
     @required this.onChanged,
-    this.initialColor = Colors.blue,
+    this.initialColor = Colors.red,
     this.size = 200,
     this.centerColorIndicatorSize,
     this.showCenterColorIndicator = true,
@@ -55,7 +55,7 @@ class _HSLColorPickerState extends State<HSLColorPicker> {
 
   @override
   void initState() {
-    color = HSLColor.fromColor(Colors.blue);
+    color = HSLColor.fromColor(widget.initialColor);
     super.initState();
   }
 
